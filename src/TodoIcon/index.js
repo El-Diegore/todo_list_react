@@ -1,6 +1,6 @@
 import { ImCross } from "react-icons/im";
 import { FaCheck } from "react-icons/fa";
-
+import './TodoIcon.css'
 const iconTypes = {
     "check":(color) => <FaCheck fill={color}/>,
     "delete":(color) => <ImCross fill={color}/>
