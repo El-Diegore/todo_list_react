@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './TodoForm.css'
 import { TodoContext } from '../TodoContext';
 
@@ -20,10 +20,12 @@ function TodoForm() {
   return (
     <form action="" 
         onSubmit={onSubmit}>
-        <label htmlFor="">Escribe tu nuevo TODO</label>
-        <textarea value={newTodoText} onChange={onChange} name="" id="" placeholder='Cocinar almuerzo hoy'></textarea>
-        <button type='submit' className='btn-form-add'>Agregar</button>
-        <button type='button' className='btn-form-cancel' onClick={onCancel}>Cancelar</button>
+        <label htmlFor="textarea">Escribe tu nuevo TODO</label>
+        <textarea value={newTodoText} onChange={onChange} name="" id="textarea" placeholder='Cocinar almuerzo hoy'></textarea>
+        <div className="btn-group">
+            <button type='submit' className='btn btn-form-add'>Agregar</button>
+            <button type='button' className='btn btn-form-cancel' onClick={onCancel}>Cancelar</button>
+        </div>
     </form>
   )
 }
